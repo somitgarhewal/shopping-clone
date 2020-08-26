@@ -1,8 +1,16 @@
 import React from 'react'
-import './Product.css'
+import './assets/css/Product.css'
+import { addToBasket } from './redux/action/action'
+import { useDispatch } from 'react-redux'
 
 function Product({ id, title, image, price, rating }) {
+    const dispatch = useDispatch()
 
+    const handleAdd = () => {
+        const data = { id, title, image, price, rating }
+       
+        dispatch(addToBasket(data))
+    }
     return (
         <div className="product">
             <div className="product_info">
@@ -20,7 +28,7 @@ function Product({ id, title, image, price, rating }) {
                 </div>
             </div>
             <img src={image} />
-            <button>Add to cart</button>
+            <button onClick={handleAdd}>Add to cart</button>
         </div>
     )
 }
