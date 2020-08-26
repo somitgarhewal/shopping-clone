@@ -1,11 +1,10 @@
-import { ADD_TO_BASKET } from '../Type'
 
 const initialState = {
     basket: [],
 }
 
 function reducer(state = initialState, action) {
-    debugger
+   
     switch (action.type) {
         case 'ADD_TO_BASKET':
             const basketRef = [...state.basket]
@@ -15,7 +14,11 @@ function reducer(state = initialState, action) {
                 basket: basketRef
             }
         case 'REMOVE_FROM_BASKET':
-            break;
+            const deleteItemRef = [...state.basket]
+            return {
+              ...state,
+              basket: deleteItemRef.filter(item => item.id !== action.payload)
+            }
 
         default:
             return state;
