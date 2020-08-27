@@ -1,0 +1,29 @@
+.accountExtraContent{
+        min-height: 200px;
+        padding: 10px;
+        margin: 10px;
+        background-color: white;
+        min-width: 250px;
+        width: 100%;
+        border: 1px solid gainsboro;
+        border-radius: 5px;
+        cursor: pointer;   
+}
+.accountExtraContent__title{
+    padding: 8px;
+}
+.accountExtraContent__content{
+    display: flex;
+    color: rgb(35, 89, 236);
+    font-size: 13px;
+    margin-top: 7px;
+    margin-bottom: 7px;
+    text-decoration: none;
+    padding: 3px;
+    padding-left: 8px;
+}
+.accountExtraContent__content:hover{
+    display: flex;
+    color: #b49406;
+    text-decoration: underline;
+}

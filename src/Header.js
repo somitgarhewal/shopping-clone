@@ -13,7 +13,7 @@ function Header() {
     const dispatch = useDispatch()
     const login = () => {
         if (user) {
-            dispatch(loginUser(null))
+           
             auth.signOut();
         }
     }
@@ -27,10 +27,10 @@ function Header() {
                 <SearchIcon className="header__searchIcon" />
             </div>
             <div className="header__nav">
-                <Link to={!user && "/login"} className="header__link">
+                <Link to={user ? "/account" : "/login"} className="header__link">
                     <div onClick={login} className="header__option">
                         <span className="header__optionLineOne">Hello {user && user.user?.email}</span>
-                        <span className="header__optionLineTwo">{user ? 'Sign Out' : 'Signin'}</span>
+                        <span className="header__optionLineTwo">{user ? 'Your Account' : 'Signin'}</span>
                     </div>
                 </Link>
                 <Link to={!user && "/login"} className="header__link">

@@ -28,7 +28,7 @@ function Product({ id, title, image, price, rating }) {
                 </div>
             </div>
             <img src={image} />
-            <button onClick={handleAdd}>Add to cart</button>
+            <button type='button' onClick={handleAdd}>Add to cart</button>
         </div>
     )
 }

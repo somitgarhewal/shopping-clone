@@ -1,0 +1,25 @@
+.youraccount {
+    background-color: white;
+    min-height: 100vh;
+    min-width: fit-content;
+    padding-right: 10%;
+    padding-left: 10%;
+    padding-top: 65px;
+}
+.youraccount > h1{
+    padding-top: 3px;
+    padding-left: auto;
+    padding-right: auto;
+    display: flex;
+    font-weight: 200;
+}
+
+.youraccount__row {
+    display: flex;
+
+}
+.youraccount__extraContent{
+    margin-top: 35px;
+    padding-top: 35px;
+   border-top: 1px solid gainsboro;
+}
